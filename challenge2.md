@@ -77,18 +77,4 @@ Before submitting, confirm the following:
 
 ---
 
-## Submission
-
-Take three screenshots and keep them ready for upload:
-
-1. The copilot in the live channel (URL bar or Teams context visible) showing a grounded response to one of the three validation scenarios.
-2. The Power Automate flow run history showing a successful run triggered by a Dynamics 365 status change.
-3. A Dynamics 365 opportunity record showing the automatically created follow-up task with AI analysis content in the task description.
-
-Name your files: `<Your_Name>_Challenge02_<file01>_<HH:MM>`, `<file02>`, `<file03>` (same pattern).
-
-Navigate to the **Hackathon Portal > Learning Resources**, scroll to **Upload Your Certificate**, and submit all three files.
-
----
-
 Click **Next** at the bottom of the page to proceed to the Bonus Challenge.
