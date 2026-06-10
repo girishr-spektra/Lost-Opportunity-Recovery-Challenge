@@ -30,12 +30,13 @@ Confirm access to:
 
 ### 1. Opportunity Data in Blob Storage
 
-Get your historical lost opportunity data out of Dynamics 365 and into Blob Storage so it can be indexed.
+Upload the provided lost opportunity dataset to Blob Storage so it can be indexed.
 
-- In Dynamics 365 Sales, navigate to **Opportunities** and filter for **Closed as Lost** records. Review the pre-seeded sample data - you have at least 20 lost opportunities across multiple loss reason categories.
-- Export the closed-lost opportunities to a file format suitable for downstream processing. Include the core fields (account, product line, deal value, loss reason, close date) and as much unstructured content as possible (notes, email log excerpts, call summaries).
+- Locate the `opportunities.csv` file you downloaded in Getting Started. This file contains 20 closed-lost opportunity records across five loss reason categories, with rich deal narratives in the Description field.
 - Create an Azure Storage Account and a blob container named `lost-opportunities`.
-- Upload the exported data to the `lost-opportunities` container.
+- Upload `opportunities.csv` to the `lost-opportunities` container.
+
+> **Note:** In a production scenario this data would be exported directly from Dynamics 365. For this lab the dataset is pre-prepared so you can focus on building the intelligence layer.
 
 ---
 

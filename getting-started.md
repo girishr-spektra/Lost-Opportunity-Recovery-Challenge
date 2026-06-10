@@ -54,54 +54,17 @@ Feel free to start, stop, or restart your virtual machine as needed from the Res
 
 ---
 
-## Explore Your Dynamics 365 Environment
+## Download the Opportunity Dataset
 
-Your sandbox includes a pre-configured Dynamics 365 Sales Enterprise environment. You will import the opportunity dataset in the next section.
+A dataset of 20 closed-lost opportunity records has been prepared for this lab. You will upload this file to Azure Blob Storage in Challenge 1 - download it now so it is ready.
 
-1. Open a new browser tab and navigate to the Dynamics 365 home portal:
-
-   ```
-   https://home.dynamics.com
-   ```
-
-   Sign in with the provided credentials. The portal displays all Dynamics 365 apps available in your environment.
-
-1. Locate **Sales Hub** in the app list and click it to open Dynamics 365 Sales.
-
-   > **Note:** If Sales Hub is not listed, select **All Apps** or search for "Sales Hub" using the search bar at the top of the page. If it still does not appear, navigate to `https://make.powerapps.com`, select the environment from the top-right selector, go to **Apps**, and look for **Sales Hub** there.
-
-1. Navigate to **Sales** > **Opportunities** and confirm the app loads correctly. The opportunities list will be empty at this point - you will import the dataset in the next section.
-
-   > **Note:** If you cannot access the Opportunities view, confirm you are in the correct Dynamics 365 environment. Navigate to **Settings > Advanced Settings > Security > Users** and verify your user account has the **System Administrator** role assigned.
-
----
-
-## Import the Opportunity Dataset
-
-Your environment does not have pre-seeded sales data. Import the provided dataset to populate Dynamics 365 with 20 closed-lost opportunity records across five loss reason categories before starting Challenge 1.
-
-1. Download the dataset file from the lab repository:
+1. Download the dataset file:
 
    ```
    https://raw.githubusercontent.com/CloudLabsAI-Azure/Lost-Opportunity-Recovery-Challenge/main/data/opportunities.csv
    ```
 
-   Save the file to your Desktop or Downloads folder.
-
-1. In Sales Hub, navigate to **Sales** > **Opportunities**. On the Opportunities list toolbar, select **Import from Excel** (or look for an **Import** option in the toolbar or the **...** menu).
-
-1. In the **Import from CSV** dialog, select **Choose File** and upload the `opportunities.csv` file. Select **Next**.
-
-1. On the **Map Attributes** page, three fields will auto-map. Manually map the remaining field:
-
-   - For **Est. Revenue** - select **Est. Revenue** from the dropdown
-   - Leave **Potential Customer** as **Not Mapped (Use Default)** - it is a lookup field and can be skipped
-
-1. Select **Finish Import**. The import runs in the background and typically completes within 2-3 minutes.
-
-1. Refresh the **Opportunities** list and confirm 20 records are present.
-
-   > **Note:** If the import fails or record count is less than 20, re-download the CSV and retry. Ensure the file was not modified before upload. Contact CloudLabs support if the issue persists.
+   Save the file to your Desktop or Downloads folder. This CSV contains 20 lost deals across five loss reason categories (Pricing, Competitor, Product Fit, Long Approval Cycle, Delayed Response) and is the data source you will index in Challenge 1.
 
 ---
 
