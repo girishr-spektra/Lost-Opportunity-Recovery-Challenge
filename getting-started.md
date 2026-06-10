@@ -100,17 +100,21 @@ Your environment does not have pre-seeded sales data. Import the provided datase
 
 1. On the **Map Record Types** page, map the file to the **Opportunity** record type and select **Next**.
 
-1. On the **Map Fields** page, confirm the following column mappings:
+1. On the **Map Fields** page, set the following mappings manually using the dropdown for each row:
 
-   | CSV Column | Dynamics 365 Field |
-   |---|---|
-   | Topic | Topic |
-   | Account Name | Potential Customer |
-   | Estimated Revenue | Est. Revenue |
-   | Actual Close Date | Actual Close Date |
-   | Description | Description |
+   | CSV Column | Dynamics 365 Field | Action |
+   |---|---|---|
+   | Topic | Topic | Auto-mapped - confirm it shows Topic |
+   | Actual Close Date | Actual Close Date | Auto-mapped - confirm |
+   | Description | Description | Auto-mapped - confirm |
+   | Estimated Revenue | Est. Revenue | Select **Est. Revenue** from the dropdown |
+   | Account Name | (leave as Not Mapped) | Potential Customer is a lookup - skip it |
+   | Loss Reason | (leave as Not Mapped) | No standard field - skip it |
+   | Product Line | (leave as Not Mapped) | No standard field - skip it |
 
-   Map any remaining columns as best fit and select **Next**.
+   > **Note:** `Account Name` cannot be mapped directly because **Potential Customer** in Dynamics 365 is a lookup field that requires an existing Account record. The rich loss context is already captured in the **Description** field of each record, which is what the AI Search index will use.
+
+   Select **Next** after confirming the mappings above.
 
 1. On the **Review Settings and Import Data** page, select **Submit** to start the import. The import runs in the background and typically completes within 2-3 minutes.
 
