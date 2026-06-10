@@ -58,15 +58,17 @@ Feel free to start, stop, or restart your virtual machine as needed from the Res
 
 Your sandbox includes a pre-configured Dynamics 365 Sales Enterprise environment. You will import the opportunity dataset in the next section.
 
-1. Open a new browser tab and navigate to:
+1. Open a new browser tab and navigate to the Dynamics 365 home portal:
 
    ```
-   https://make.powerapps.com
+   https://home.dynamics.com
    ```
 
-   Sign in with the provided credentials and select the pre-provisioned environment from the environment selector in the top-right corner.
+   Sign in with the provided credentials. The portal displays all Dynamics 365 apps available in your environment.
 
-1. On the **Apps** page, find and click **Sales Hub** to open Dynamics 365 Sales. If Sales Hub is not visible, select **All** from the filter to show all available apps in the environment.
+1. Locate **Sales Hub** in the app list and click it to open Dynamics 365 Sales.
+
+   > **Note:** If Sales Hub is not listed, select **All Apps** or search for "Sales Hub" using the search bar at the top of the page. If it still does not appear, navigate to `https://make.powerapps.com`, select the environment from the top-right selector, go to **Apps**, and look for **Sales Hub** there.
 
 1. Navigate to **Sales** > **Opportunities** and confirm the app loads correctly. The opportunities list will be empty at this point - you will import the dataset in the next section.
 
