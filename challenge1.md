@@ -10,7 +10,7 @@ The challenge is complete when your Microsoft Foundry agent returns grounded, ci
 
 ## Prerequisites
 
-Deploy all resources in the **same region** (recommended: sweden central, west us 2, ) before you start.
+Deploy all resources in the **<inject key="Region"></inject>** region before you start.
 
 | Resource | Recommended SKU | Notes |
 |---|---|---|
@@ -38,6 +38,13 @@ Set up the storage layer that holds the lost opportunity corpus.
 
 > **Note:** In a production scenario this data would be exported directly from Dynamics 365. For this lab the dataset is pre-prepared so you can focus on building the intelligence layer.
 
+<validation step="c3856564-c2db-42e0-9791-5286eeebc48d" />
+ 
+> **Congratulations** on completing the Challenge! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding Challenge. If you receive a success message, you can proceed to the next Challenge. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
+
 ---
 
 ### 2. AI Models
@@ -49,6 +56,13 @@ Prepare the models your index and agent will rely on.
   - An embedding model - use `text-embedding-ada-002`.
 - Note the deployment names - you will need them when configuring the index and agent.
 
+<validation step="7291f3fd-7630-43d8-8cf0-305c73462b19" />
+ 
+> **Congratulations** on completing the Challenge! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding Challenge. If you receive a success message, you can proceed to the next Challenge. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
+
 ---
 
 ### 3. Loss Intelligence Index
@@ -57,11 +71,14 @@ Build a vector search index from the opportunity data in Blob Storage.
 
 - Create an Azure AI Search instance (Basic SKU).
 - Use the **Import data** option in AI Search to connect to your `lost-opportunities` blob container.
-- Select your embedding model deployment as the vectorization source.
-- Complete the wizard to create the index and run the indexer.
-- Validate the index:
-  - Document count is greater than 0.
-  - Run a few test queries a sales manager would ask in Search Explorer - for example, "deals lost due to pricing", "competitor displacement", "approval cycle delays". Confirm relevant records come back.
+- Set the vectorizer kind to **Microsoft Foundry**, and select your `text-embedding-ada-002` deployment. Run the indexer.
+
+<validation step="98c45519-9031-4efe-9727-8fb4b62d50f6" />
+ 
+> **Congratulations** on completing the Challenge! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding Challenge. If you receive a success message, you can proceed to the next Challenge. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
 ---
 
@@ -83,6 +100,13 @@ Build the AI agent in Microsoft Foundry and connect it to your loss intelligence
   - What is the revised strategy for deals lost to a named competitor?
   - Generate a re-engagement profile for [specific opportunity].
   - What is the conversion likelihood if we apply [revised strategy] to [specific deal]?
+
+<validation step="4b682a35-ba5e-49e6-89db-b03f0b61de68" />
+ 
+> **Congratulations** on completing the Challenge! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding Challenge. If you receive a success message, you can proceed to the next Challenge. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
 ---
 
