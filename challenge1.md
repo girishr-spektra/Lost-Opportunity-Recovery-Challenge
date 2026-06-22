@@ -55,8 +55,8 @@ Prepare the models your index and agent will rely on.
 
 Build a vector search index from the opportunity data in Blob Storage.
 
-- Create an Azure AI Search instance (Basic SKU is sufficient to control cost).
-- Use the **Import and vectorize data** option in AI Search to connect to your `lost-opportunities` blob container.
+- Create an Azure AI Search instance (Basic SKU).
+- Use the **Import data** option in AI Search to connect to your `lost-opportunities` blob container.
 - Select your embedding model deployment as the vectorization source.
 - Complete the wizard to create the index and run the indexer.
 - Validate the index:
