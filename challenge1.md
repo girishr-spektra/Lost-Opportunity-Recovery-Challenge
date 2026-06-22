@@ -71,11 +71,7 @@ Build a vector search index from the opportunity data in Blob Storage.
 
 - Create an Azure AI Search instance (Basic SKU).
 - Use the **Import data** option in AI Search to connect to your `lost-opportunities` blob container.
-- Select your embedding model deployment as the vectorization source.
-- Complete the wizard to create the index and run the indexer.
-- Validate the index:
-  - Document count is greater than 0.
-  - Run a few test queries a sales manager would ask in Search Explorer - for example, "deals lost due to pricing", "competitor displacement", "approval cycle delays". Confirm relevant records come back.
+- Set the vectorizer kind to **Microsoft Foundry**, and select your `text-embedding-ada-002` deployment. Run the indexer.
 
 <validation step="98c45519-9031-4efe-9727-8fb4b62d50f6" />
  
