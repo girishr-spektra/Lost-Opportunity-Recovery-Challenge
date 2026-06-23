@@ -70,38 +70,86 @@ Two data files have been prepared for this lab. Download the zip archive now —
 
 ---
 
-## Verify Access to Required Services
+## Setup Copilot studio
 
-Confirm you can access all services that will be used during the challenge before you begin:
+1. Open a new browser tab and navigate to the Power Platform admin center by entering the following URL:
 
-1. Open a new browser tab and navigate to Microsoft Copilot Studio:
+   ```
+   https://admin.powerplatform.microsoft.com
+   ```
+   
+1. In the **Power Platform admin center**, select **Manage (1)**, choose **Environments (2)**, and then click **ODL_User <inject key="DeploymentID" enableCopy="false"/>'s Environment (3)**.
+
+   ![](./media/uppowadminimg1.png)
+
+1. In the environment page, click on **See all** under **S2S apps**.
+
+   ![](./media/pro-activ-gg-g3.png)
+
+   > <span style="color:red"><strong>Important:</strong> Check whether <code>https://sandboxailabs1001.onmicrosoft.com/cloudlabs.ai</code> is already added. If either one is present, <strong>skip to Step 12</strong>. Otherwise, proceed with the steps below.</span>
+
+   ![](./media/powerplat.png)
+
+1. In the next pane, click on **+ New app user**.
+
+   ![](./media/uppowadminimg3.png)
+
+1. In the create a new app user pane, under **App**, click on **+ Add an app**.
+
+   ![](./media/pro-activ-gg-g4.png)
+
+1. In the **Add an app from Microsoft Entra ID** pane, enter `https://sandboxailabs1001.onmicrosoft.com/cloudlabs.ai` in the search box **(1)**, select whichever app is available from the results **(2)**, and then click **Add (3)**.
+
+   ![](./media/pro-activ-gg-g5.png)
+
+   > <span style="color:red"><strong>Important:</strong> If you cannot find the app in the search results, it is likely that it has already been added. Return to the <strong>Step 3</strong> and verify whether the app is listed. If it is present, skip to <strong>Step 12</strong>.</span>
+
+1. Under **Business unit**, select the available business unit from the list **(2)**.
+
+   ![](./media/pro-activ-gg-g6.png)
+
+1. Beside **Security roles** click on **Edit** icon.
+
+   ![](./media/pro-activ-gg-g7.png)
+
+1. In the **Sync Permissions** pane, select **System Administrator (1)**, and then click **Save (2)**.
+
+   ![](./media/pro-activ-gg-g8.png)
+
+1. In the pop-up window, select **save**.
+
+   ![](./media/pro-activ-gg-g9.png)
+
+1. Review all the details and click on **Create**.
+
+   ![](./media/pro-activ-gg-g10.png)
+
+1. Navigate to **Microsoft Copilot Studio** by opening a new browser tab and entering the following URL:
 
    ```
    https://copilotstudio.microsoft.com
    ```
 
-   Sign in with the provided credentials and confirm access is granted.
+1. On the **Welcome to Microsoft Copilot Studio** screen, keep the default **country/region** selection and click **Get Started** to continue.
 
-1. Open another browser tab and navigate to Power Automate:
+   ![](./media/pro-activ-gg-g11.png)
 
-   ```
-   https://make.powerautomate.com
-   ```
+1. If the **Welcome to Copilot Studio!** pop-up appears, click **Skip** to continue to the main dashboard.
 
-   Sign in and confirm that access to Premium connectors and the Dynamics 365 connector is available under your license.
+   ![](./media/gs-travel-g3.png)
 
-1. Navigate to Microsoft AI Foundry:
+1. If the **We've updated you to the latest version of Microsoft Copilot Studio** pop-up appears, click **Got it!**.
 
-   ```
-   https://ai.azure.com
-   ```
+   ![](./media/pro-activ-gg-g12.png)
 
-   Sign in and confirm the pre-provisioned Foundry project is visible, or confirm you have permission to create a new project.
+1. If the **What's new in Copilot Studio** pop-up appears, click the **Close (X)** icon to dismiss it.
 
-   > **Note:** If any service access is unavailable, navigate to the Environment tab in your challenge portal to retrieve alternate credentials or contact CloudLabs support.
+   ![](./media/pro-activ-gg-g13.png)
 
----
+1. In Copilot Studio, open the environment picker **(1)**, expand **Supported environments (2)**, and select **ODL_User <inject key="Deployment ID" enableCopy="false"></inject>'s Environment (3)** to switch.
 
-Now, click on **Next** from the lower right corner to move on to the challenge.
+   ![](./media/ex1-travel-g6.png)
+
+Click **Next** at the bottom of the page to proceed to the next page.
 
 ## Happy Hacking!!
