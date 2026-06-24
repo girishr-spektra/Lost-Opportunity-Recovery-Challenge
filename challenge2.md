@@ -153,7 +153,16 @@ Build the automation that ensures no lost deal goes unanalyzed. When a rep marks
 
   > **Note:** Leave the Regarding field blank.
 
-- Save the flow and test it by opening one of your imported opportunities in Dynamics 365 and closing it as **Out-Sold**. Confirm the flow runs successfully and a Task is created under **Activities** with the AI-generated analysis in the Description field.
+- Save the flow and confirm there are no configuration errors, then proceed to test it using the steps below.
+
+#### Test the Flow
+
+- In Dynamics 365 Sales Hub, navigate to **Opportunities**.
+- Open any one of the 20 imported opportunity records.
+- In the command bar, select **Close as Lost**.
+- In the **Close Opportunity** dialog, set **Status Reason** to **Out-Sold** and select **OK**.
+- Navigate to **Power Automate**, open **Lost Opportunity Flow**, and select **Run history** to confirm the flow ran successfully with a green check.
+- Return to Dynamics 365, reopen the same opportunity, and select **Activities** to confirm a new **Task** record was created with the AI-generated analysis in the Description field.
 
 <validation step="502a3add-4312-4ef6-b9a0-0bd35d454d83" />
  
@@ -170,7 +179,6 @@ Publish the copilot and confirm the end-to-end system works.
 
 - Publish the copilot to a **web channel** or **Microsoft Teams channel**.
 - Open the published channel and confirm the copilot loads and responds.
-- Ask the copilot about a lost deal from the dataset and confirm it returns a grounded response referencing indexed deal records.
 
 <validation step="2e4b3a3b-ec54-4cce-beec-206dbeef936f" />
  
